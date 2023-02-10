@@ -6,3 +6,5 @@ I am tring to summarize the fundamental programming techniques of OCaml here.
 ****
 Reference:
 - [PoPL Material from JHU](https://pl.cs.jhu.edu/pl/ocaml/lecture.html)
+- [OCaml Official HandBook](https://v2.ocaml.org/api/List.html)
+- [OCaml for skeptical](https://www2.lib.uchicago.edu/keith/ocaml-class/class-01.html)
