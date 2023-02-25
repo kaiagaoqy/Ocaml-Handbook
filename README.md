@@ -9,3 +9,5 @@ Reference:
 - [OCaml Official HandBook](https://v2.ocaml.org/api/List.html)
 - [OCaml for skeptical](https://www2.lib.uchicago.edu/keith/ocaml-class/class-01.html)
 - [Official Exercise](https://ocaml.org/problems#70A)
+- [Cornell reading resource][https://www.cs.cornell.edu/courses/cs3110/2014sp/recitations/2/tuples_records_data.html]
+- 
