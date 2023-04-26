@@ -1,0 +1,664 @@
+
+type token = 
+  | WITH
+  | TRY
+  | THEN
+  | STRING of (
+# 21 "FbRX/fbrxparser.mly"
+       (string)
+# 10 "FbRX/fbrxparser__mock.ml.mock"
+)
+  | SEMICOLON
+  | RPAREN
+  | REC
+  | RCURLY
+  | RAISE
+  | PLUS
+  | OR
+  | NOT
+  | MINUS
+  | LPAREN
+  | LET
+  | LCURLY
+  | INT of (
+# 23 "FbRX/fbrxparser.mly"
+       (int)
+# 27 "FbRX/fbrxparser__mock.ml.mock"
+)
+  | IN
+  | IF
+  | IDENT of (
+# 18 "FbRX/fbrxparser.mly"
+       (string)
+# 34 "FbRX/fbrxparser__mock.ml.mock"
+)
+  | GOESTO
+  | FUNCTION
+  | EXN of (
+# 56 "FbRX/fbrxparser.mly"
+       (string)
+# 41 "FbRX/fbrxparser__mock.ml.mock"
+)
+  | EQUAL
+  | EOEX
+  | ELSE
+  | DOT
+  | BOOL of (
+# 22 "FbRX/fbrxparser.mly"
+       (bool)
+# 50 "FbRX/fbrxparser__mock.ml.mock"
+)
+  | APPEND
+  | AND
+
+# 1 "FbRX/fbrxparser.mly"
+  
+
+open Fbrxast;;
+exception DuplicateLabel
+
+let mkexn n =
+  "#" ^ n
+
+# 64 "FbRX/fbrxparser__mock.ml.mock"
+
+let menhir_begin_marker =
+  0
+
+and (xv_simple_expr, xv_record_body, xv_main, xv_label, xv_ident_usage, xv_ident_decl, xv_expr, xv_exn_def, xv_appl_expr) =
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 138 "FbRX/fbrxparser.mly"
+               _3
+# 73 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 138 "FbRX/fbrxparser.mly"
+          _2
+# 77 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 138 "FbRX/fbrxparser.mly"
+   _1
+# 81 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 139 "FbRX/fbrxparser.mly"
+      ( _2 )
+# 86 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 135 "FbRX/fbrxparser.mly"
+                   _3
+# 91 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 135 "FbRX/fbrxparser.mly"
+               _2
+# 95 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 135 "FbRX/fbrxparser.mly"
+   _1
+# 99 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_simple_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 136 "FbRX/fbrxparser.mly"
+      ( Select(_3, _1) )
+# 104 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 133 "FbRX/fbrxparser.mly"
+          _2
+# 109 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 133 "FbRX/fbrxparser.mly"
+   _1
+# 113 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 134 "FbRX/fbrxparser.mly"
+      ( Record [] )
+# 118 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 131 "FbRX/fbrxparser.mly"
+                      _3
+# 123 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 131 "FbRX/fbrxparser.mly"
+          _2
+# 127 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_record_body) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 131 "FbRX/fbrxparser.mly"
+   _1
+# 131 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 132 "FbRX/fbrxparser.mly"
+      ( Record _2 )
+# 136 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 129 "FbRX/fbrxparser.mly"
+   _1
+# 141 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_ident_usage) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 130 "FbRX/fbrxparser.mly"
+      ( _1 )
+# 146 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 127 "FbRX/fbrxparser.mly"
+   _1
+# 151 "FbRX/fbrxparser__mock.ml.mock"
+   : (
+# 21 "FbRX/fbrxparser.mly"
+       (string)
+# 155 "FbRX/fbrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 128 "FbRX/fbrxparser.mly"
+      ( String _1 )
+# 160 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 125 "FbRX/fbrxparser.mly"
+   _1
+# 165 "FbRX/fbrxparser__mock.ml.mock"
+   : (
+# 22 "FbRX/fbrxparser.mly"
+       (bool)
+# 169 "FbRX/fbrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 126 "FbRX/fbrxparser.mly"
+      ( Bool _1 )
+# 174 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 122 "FbRX/fbrxparser.mly"
+            _1
+# 180 "FbRX/fbrxparser__mock.ml.mock"
+   : (
+# 23 "FbRX/fbrxparser.mly"
+       (int)
+# 184 "FbRX/fbrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 124 "FbRX/fbrxparser.mly"
+      ( Int _1 )
+# 189 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 145 "FbRX/fbrxparser.mly"
+                              _5
+# 194 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_record_body) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 145 "FbRX/fbrxparser.mly"
+                    _4
+# 198 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 145 "FbRX/fbrxparser.mly"
+               _3
+# 202 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 145 "FbRX/fbrxparser.mly"
+         _2
+# 206 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 145 "FbRX/fbrxparser.mly"
+   _1
+# 210 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 146 "FbRX/fbrxparser.mly"
+      ( let rec addifnotpresent (lab, e) l =
+          match l with [] -> [(lab,e)]
+	   | (l1,e1) :: tl -> if l1=lab then (raise DuplicateLabel) else (l1,e1) :: (addifnotpresent (lab, e) tl)
+          in addifnotpresent (_1, _3) _5 )
+# 218 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_record_body) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 143 "FbRX/fbrxparser.mly"
+               _3
+# 223 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 143 "FbRX/fbrxparser.mly"
+         _2
+# 227 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 142 "FbRX/fbrxparser.mly"
+            _1
+# 232 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 144 "FbRX/fbrxparser.mly"
+      ( [(_1, _3)] )
+# 237 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_record_body) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 81 "FbRX/fbrxparser.mly"
+      _2
+# 242 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 80 "FbRX/fbrxparser.mly"
+     _1
+# 247 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 81 "FbRX/fbrxparser.mly"
+            ( _1 )
+# 252 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_main) : (
+# 76 "FbRX/fbrxparser.mly"
+      (Fbrxast.expr)
+# 256 "FbRX/fbrxparser__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 152 "FbRX/fbrxparser.mly"
+      _1
+# 262 "FbRX/fbrxparser__mock.ml.mock"
+   : (
+# 18 "FbRX/fbrxparser.mly"
+       (string)
+# 266 "FbRX/fbrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 154 "FbRX/fbrxparser.mly"
+      ( Lab _1 )
+# 271 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_label) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 156 "FbRX/fbrxparser.mly"
+            _1
+# 277 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 158 "FbRX/fbrxparser.mly"
+      ( Var _1 )
+# 282 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_ident_usage) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 161 "FbRX/fbrxparser.mly"
+           _1
+# 288 "FbRX/fbrxparser__mock.ml.mock"
+   : (
+# 18 "FbRX/fbrxparser.mly"
+       (string)
+# 292 "FbRX/fbrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 163 "FbRX/fbrxparser.mly"
+      ( Ident _1 )
+# 297 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_ident_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 111 "FbRX/fbrxparser.mly"
+                 _3
+# 302 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 111 "FbRX/fbrxparser.mly"
+         _2
+# 306 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_exn_def) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 111 "FbRX/fbrxparser.mly"
+   _1
+# 310 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 112 "FbRX/fbrxparser.mly"
+      ( let n = _2 in Raise(mkexn n, _3) )
+# 315 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 109 "FbRX/fbrxparser.mly"
+                                      _7
+# 320 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__7_ : Lexing.position) (_endpos__7_ : Lexing.position) (_startofs__7_ : int) (_endofs__7_ : int) (_loc__7_ : Lexing.position * Lexing.position) (
+# 109 "FbRX/fbrxparser.mly"
+                               _6
+# 324 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 109 "FbRX/fbrxparser.mly"
+                         _5
+# 328 "FbRX/fbrxparser__mock.ml.mock"
+   : (
+# 18 "FbRX/fbrxparser.mly"
+       (string)
+# 332 "FbRX/fbrxparser__mock.ml.mock"
+  )) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 109 "FbRX/fbrxparser.mly"
+                 _4
+# 336 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_exn_def) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 109 "FbRX/fbrxparser.mly"
+            _3
+# 340 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 109 "FbRX/fbrxparser.mly"
+       _2
+# 344 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 109 "FbRX/fbrxparser.mly"
+   _1
+# 348 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 110 "FbRX/fbrxparser.mly"
+      ( let n = _4 in Try(_2, mkexn n, Ident _5, _7) )
+# 353 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 107 "FbRX/fbrxparser.mly"
+                                _6
+# 358 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 107 "FbRX/fbrxparser.mly"
+                             _5
+# 362 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 107 "FbRX/fbrxparser.mly"
+                        _4
+# 366 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 107 "FbRX/fbrxparser.mly"
+                  _3
+# 370 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 107 "FbRX/fbrxparser.mly"
+       _2
+# 374 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 107 "FbRX/fbrxparser.mly"
+   _1
+# 378 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 108 "FbRX/fbrxparser.mly"
+      ( Let(_2, _4, _6) )
+# 383 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+                                               _8
+# 388 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__8_ : Lexing.position) (_endpos__8_ : Lexing.position) (_startofs__8_ : int) (_endofs__8_ : int) (_loc__8_ : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+                                            _7
+# 392 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__7_ : Lexing.position) (_endpos__7_ : Lexing.position) (_startofs__7_ : int) (_endofs__7_ : int) (_loc__7_ : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+                                       _6
+# 396 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+                                 _5
+# 400 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+                      _4
+# 404 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+           _3
+# 408 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+       _2
+# 412 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 105 "FbRX/fbrxparser.mly"
+   _1
+# 416 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 106 "FbRX/fbrxparser.mly"
+      ( LetRec(_3, _4, _6, _8) )
+# 421 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 103 "FbRX/fbrxparser.mly"
+                          _6
+# 426 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 103 "FbRX/fbrxparser.mly"
+                     _5
+# 430 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 103 "FbRX/fbrxparser.mly"
+                _4
+# 434 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 103 "FbRX/fbrxparser.mly"
+           _3
+# 438 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 103 "FbRX/fbrxparser.mly"
+      _2
+# 442 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 103 "FbRX/fbrxparser.mly"
+   _1
+# 446 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 104 "FbRX/fbrxparser.mly"
+      ( If(_2, _4, _6) )
+# 451 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 101 "FbRX/fbrxparser.mly"
+                              _4
+# 456 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 101 "FbRX/fbrxparser.mly"
+                       _3
+# 460 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 101 "FbRX/fbrxparser.mly"
+            _2
+# 464 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 101 "FbRX/fbrxparser.mly"
+   _1
+# 468 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 102 "FbRX/fbrxparser.mly"
+      ( Function(_2, _4) )
+# 473 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 99 "FbRX/fbrxparser.mly"
+               _3
+# 478 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 99 "FbRX/fbrxparser.mly"
+        _2
+# 482 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 99 "FbRX/fbrxparser.mly"
+   _1
+# 486 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 100 "FbRX/fbrxparser.mly"
+      ( Append(_1, _3) )
+# 491 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 97 "FbRX/fbrxparser.mly"
+              _3
+# 496 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 97 "FbRX/fbrxparser.mly"
+        _2
+# 500 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 97 "FbRX/fbrxparser.mly"
+   _1
+# 504 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 98 "FbRX/fbrxparser.mly"
+      ( Equal(_1, _3) )
+# 509 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 95 "FbRX/fbrxparser.mly"
+       _2
+# 514 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 95 "FbRX/fbrxparser.mly"
+   _1
+# 518 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 96 "FbRX/fbrxparser.mly"
+      ( Not _2 )
+# 523 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 93 "FbRX/fbrxparser.mly"
+           _3
+# 528 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 93 "FbRX/fbrxparser.mly"
+        _2
+# 532 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 93 "FbRX/fbrxparser.mly"
+   _1
+# 536 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 94 "FbRX/fbrxparser.mly"
+      ( Or(_1, _3) )
+# 541 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 91 "FbRX/fbrxparser.mly"
+            _3
+# 546 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 91 "FbRX/fbrxparser.mly"
+        _2
+# 550 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 91 "FbRX/fbrxparser.mly"
+   _1
+# 554 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 92 "FbRX/fbrxparser.mly"
+      ( And(_1, _3) )
+# 559 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 89 "FbRX/fbrxparser.mly"
+              _3
+# 564 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 89 "FbRX/fbrxparser.mly"
+        _2
+# 568 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 89 "FbRX/fbrxparser.mly"
+   _1
+# 572 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 90 "FbRX/fbrxparser.mly"
+      ( Minus(_1, _3) )
+# 577 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 87 "FbRX/fbrxparser.mly"
+             _3
+# 582 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 87 "FbRX/fbrxparser.mly"
+        _2
+# 586 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 87 "FbRX/fbrxparser.mly"
+   _1
+# 590 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 88 "FbRX/fbrxparser.mly"
+      ( Plus(_1, _3) )
+# 595 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 85 "FbRX/fbrxparser.mly"
+   _1
+# 600 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_appl_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 86 "FbRX/fbrxparser.mly"
+      ( _1 )
+# 605 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 169 "FbRX/fbrxparser.mly"
+                  _3
+# 610 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 169 "FbRX/fbrxparser.mly"
+          _2
+# 614 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_exn_def) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 169 "FbRX/fbrxparser.mly"
+   _1
+# 618 "FbRX/fbrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 170 "FbRX/fbrxparser.mly"
+       ( _2 )
+# 623 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_exn_def) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 166 "FbRX/fbrxparser.mly"
+        _1
+# 629 "FbRX/fbrxparser__mock.ml.mock"
+   : (
+# 56 "FbRX/fbrxparser.mly"
+       (string)
+# 633 "FbRX/fbrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 168 "FbRX/fbrxparser.mly"
+       ( _1 )
+# 638 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_exn_def) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 118 "FbRX/fbrxparser.mly"
+             _2
+# 643 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_simple_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 118 "FbRX/fbrxparser.mly"
+   _1
+# 647 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_appl_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 119 "FbRX/fbrxparser.mly"
+      ( Appl(_1,_2) )
+# 652 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_appl_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 115 "FbRX/fbrxparser.mly"
+          _1
+# 658 "FbRX/fbrxparser__mock.ml.mock"
+   : 'tv_simple_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 117 "FbRX/fbrxparser.mly"
+      ( _1 )
+# 663 "FbRX/fbrxparser__mock.ml.mock"
+     : 'tv_appl_expr) in
+  ((let rec diverge() = diverge() in diverge()) : 'tv_simple_expr * 'tv_record_body * 'tv_main * 'tv_label * 'tv_ident_usage * 'tv_ident_decl * 'tv_expr * 'tv_exn_def * 'tv_appl_expr)
+
+and menhir_end_marker =
+  0
+
+# 171 "FbRX/fbrxparser.mly"
+  
+
+# 673 "FbRX/fbrxparser__mock.ml.mock"

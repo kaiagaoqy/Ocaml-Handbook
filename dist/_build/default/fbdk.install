@@ -1,0 +1,58 @@
+lib: [
+  "_build/install/default/lib/fbdk/META"
+  "_build/install/default/lib/fbdk/dune-package"
+  "_build/install/default/lib/fbdk/fb/debugutils.cmi" {"fb/debugutils.cmi"}
+  "_build/install/default/lib/fbdk/fb/debugutils.cmt" {"fb/debugutils.cmt"}
+  "_build/install/default/lib/fbdk/fb/debugutils.cmx" {"fb/debugutils.cmx"}
+  "_build/install/default/lib/fbdk/fb/debugutils.ml" {"fb/debugutils.ml"}
+  "_build/install/default/lib/fbdk/fb/fb.a" {"fb/fb.a"}
+  "_build/install/default/lib/fbdk/fb/fb.cma" {"fb/fb.cma"}
+  "_build/install/default/lib/fbdk/fb/fb.cmxa" {"fb/fb.cmxa"}
+  "_build/install/default/lib/fbdk/fb/fbast.cmi" {"fb/fbast.cmi"}
+  "_build/install/default/lib/fbdk/fb/fbast.cmt" {"fb/fbast.cmt"}
+  "_build/install/default/lib/fbdk/fb/fbast.cmx" {"fb/fbast.cmx"}
+  "_build/install/default/lib/fbdk/fb/fbast.ml" {"fb/fbast.ml"}
+  "_build/install/default/lib/fbdk/fb/fbdk.cmi" {"fb/fbdk.cmi"}
+  "_build/install/default/lib/fbdk/fb/fbdk.cmt" {"fb/fbdk.cmt"}
+  "_build/install/default/lib/fbdk/fb/fbdk.cmti" {"fb/fbdk.cmti"}
+  "_build/install/default/lib/fbdk/fb/fbdk.cmx" {"fb/fbdk.cmx"}
+  "_build/install/default/lib/fbdk/fb/fbdk.ml" {"fb/fbdk.ml"}
+  "_build/install/default/lib/fbdk/fb/fbdk.mli" {"fb/fbdk.mli"}
+  "_build/install/default/lib/fbdk/fb/fbinterp.cmi" {"fb/fbinterp.cmi"}
+  "_build/install/default/lib/fbdk/fb/fbinterp.cmt" {"fb/fbinterp.cmt"}
+  "_build/install/default/lib/fbdk/fb/fbinterp.cmx" {"fb/fbinterp.cmx"}
+  "_build/install/default/lib/fbdk/fb/fbinterp.ml" {"fb/fbinterp.ml"}
+  "_build/install/default/lib/fbdk/fb/fblexer.cmi" {"fb/fblexer.cmi"}
+  "_build/install/default/lib/fbdk/fb/fblexer.cmt" {"fb/fblexer.cmt"}
+  "_build/install/default/lib/fbdk/fb/fblexer.cmx" {"fb/fblexer.cmx"}
+  "_build/install/default/lib/fbdk/fb/fblexer.ml" {"fb/fblexer.ml"}
+  "_build/install/default/lib/fbdk/fb/fboptions.cmi" {"fb/fboptions.cmi"}
+  "_build/install/default/lib/fbdk/fb/fboptions.cmt" {"fb/fboptions.cmt"}
+  "_build/install/default/lib/fbdk/fb/fboptions.cmx" {"fb/fboptions.cmx"}
+  "_build/install/default/lib/fbdk/fb/fboptions.ml" {"fb/fboptions.ml"}
+  "_build/install/default/lib/fbdk/fb/fbparser.cmi" {"fb/fbparser.cmi"}
+  "_build/install/default/lib/fbdk/fb/fbparser.cmt" {"fb/fbparser.cmt"}
+  "_build/install/default/lib/fbdk/fb/fbparser.cmti" {"fb/fbparser.cmti"}
+  "_build/install/default/lib/fbdk/fb/fbparser.cmx" {"fb/fbparser.cmx"}
+  "_build/install/default/lib/fbdk/fb/fbparser.ml" {"fb/fbparser.ml"}
+  "_build/install/default/lib/fbdk/fb/fbparser.mli" {"fb/fbparser.mli"}
+  "_build/install/default/lib/fbdk/fb/fbpp.cmi" {"fb/fbpp.cmi"}
+  "_build/install/default/lib/fbdk/fb/fbpp.cmt" {"fb/fbpp.cmt"}
+  "_build/install/default/lib/fbdk/fb/fbpp.cmx" {"fb/fbpp.cmx"}
+  "_build/install/default/lib/fbdk/fb/fbpp.ml" {"fb/fbpp.ml"}
+  "_build/install/default/lib/fbdk/fb/fbtype.cmi" {"fb/fbtype.cmi"}
+  "_build/install/default/lib/fbdk/fb/fbtype.cmt" {"fb/fbtype.cmt"}
+  "_build/install/default/lib/fbdk/fb/fbtype.cmx" {"fb/fbtype.cmx"}
+  "_build/install/default/lib/fbdk/fb/fbtype.ml" {"fb/fbtype.ml"}
+  "_build/install/default/lib/fbdk/fb/version.cmi" {"fb/version.cmi"}
+  "_build/install/default/lib/fbdk/fb/version.cmt" {"fb/version.cmt"}
+  "_build/install/default/lib/fbdk/fb/version.cmx" {"fb/version.cmx"}
+  "_build/install/default/lib/fbdk/fb/version.ml" {"fb/version.ml"}
+  "_build/install/default/lib/fbdk/opam"
+]
+libexec: [
+  "_build/install/default/lib/fbdk/fb/fb.cmxs" {"fb/fb.cmxs"}
+]
+doc: [
+  "_build/install/default/doc/fbdk/README.md"
+]

@@ -1,0 +1,48 @@
+type token =
+    WITH
+  | TRY
+  | THEN
+  | SET
+  | SEMI
+  | RPAREN
+  | REF
+  | REC
+  | RCURLY
+  | RAISE
+  | PLUS
+  | OR
+  | NOT
+  | MINUS
+  | LPAREN
+  | LET
+  | LCURLY
+  | INTTYPE
+  | INT of int
+  | IN
+  | IF
+  | IDENT of string
+  | GOESTO
+  | GET
+  | FUNCTION
+  | EXN of string
+  | EQUAL
+  | EOEX
+  | ELSE
+  | DOT
+  | COLON
+  | BOOLTYPE
+  | BOOL of bool
+  | AND
+val menhir_begin_marker : int
+val xv_type_decl : Tfbsrxast.fbtype
+val xv_simple_expr : Tfbsrxast.expr
+val xv_record_type : (Tfbsrxast.label * Tfbsrxast.fbtype) list
+val xv_record_body : (Tfbsrxast.label * Tfbsrxast.expr) list
+val xv_main : Tfbsrxast.expr
+val xv_label : Tfbsrxast.label
+val xv_ident_usage : Tfbsrxast.expr
+val xv_ident_decl : Tfbsrxast.ident
+val xv_expr : Tfbsrxast.expr
+val xv_exn_def : string * Tfbsrxast.fbtype
+val xv_appl_expr : Tfbsrxast.expr
+val menhir_end_marker : int

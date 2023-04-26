@@ -1,0 +1,15 @@
+let () =
+let this_dir = Filename.dirname Sys.argv.(2) in
+let lib_dir = Filename.concat this_dir "libs" in
+Topdirs.dir_directory lib_dir;;
+
+#load "fbrxast.cmo"
+#load "fbrxpp.cmo"
+#load "fbrxtype.cmo"
+#load "fbrxlexer.cmo"
+#load "fbrxparser.cmo"
+#load "fbrxoptions.cmo"
+#load "fbrxinterp.cmo"
+#load "version.cmo"
+#load "fbdk.cmo"
+#load "debugutils.cmo"

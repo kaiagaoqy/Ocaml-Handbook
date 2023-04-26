@@ -1,0 +1,803 @@
+
+type token = 
+  | WITH
+  | TRY
+  | THEN
+  | SET
+  | SEMI
+  | RPAREN
+  | REF
+  | REC
+  | RCURLY
+  | RAISE
+  | PLUS
+  | OR
+  | NOT
+  | MINUS
+  | LPAREN
+  | LET
+  | LCURLY
+  | INTTYPE
+  | INT of (
+# 24 "TFbSRX/tfbsrxparser.mly"
+       (int)
+# 25 "TFbSRX/tfbsrxparser__mock.ml.mock"
+)
+  | IN
+  | IF
+  | IDENT of (
+# 21 "TFbSRX/tfbsrxparser.mly"
+       (string)
+# 32 "TFbSRX/tfbsrxparser__mock.ml.mock"
+)
+  | GOESTO
+  | GET
+  | FUNCTION
+  | EXN of (
+# 43 "TFbSRX/tfbsrxparser.mly"
+       (string)
+# 40 "TFbSRX/tfbsrxparser__mock.ml.mock"
+)
+  | EQUAL
+  | EOEX
+  | ELSE
+  | DOT
+  | COLON
+  | BOOLTYPE
+  | BOOL of (
+# 13 "TFbSRX/tfbsrxparser.mly"
+       (bool)
+# 51 "TFbSRX/tfbsrxparser__mock.ml.mock"
+)
+  | AND
+
+# 1 "TFbSRX/tfbsrxparser.mly"
+  
+
+open Tfbsrxast;;
+open Tfbsrxpp;;
+
+
+# 62 "TFbSRX/tfbsrxparser__mock.ml.mock"
+
+let menhir_begin_marker =
+  0
+
+and (xv_type_decl, xv_simple_expr, xv_record_type, xv_record_body, xv_main, xv_label, xv_ident_usage, xv_ident_decl, xv_expr, xv_exn_def, xv_appl_expr) =
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 164 "TFbSRX/tfbsrxparser.mly"
+                    _3
+# 71 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 164 "TFbSRX/tfbsrxparser.mly"
+          _2
+# 75 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 164 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 79 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 165 "TFbSRX/tfbsrxparser.mly"
+      ( _2 )
+# 84 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_type_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 162 "TFbSRX/tfbsrxparser.mly"
+             _2
+# 89 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 162 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 93 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 163 "TFbSRX/tfbsrxparser.mly"
+      ( TRef _1 )
+# 98 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_type_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 160 "TFbSRX/tfbsrxparser.mly"
+                      _3
+# 103 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 160 "TFbSRX/tfbsrxparser.mly"
+          _2
+# 107 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_record_type) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 160 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 111 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 161 "TFbSRX/tfbsrxparser.mly"
+      ( TRec _2 )
+# 116 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_type_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 158 "TFbSRX/tfbsrxparser.mly"
+                    _3
+# 121 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 158 "TFbSRX/tfbsrxparser.mly"
+             _2
+# 125 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 158 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 129 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 159 "TFbSRX/tfbsrxparser.mly"
+      ( TArrow(_1, _3) )
+# 134 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_type_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 156 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 139 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 157 "TFbSRX/tfbsrxparser.mly"
+      ( TBool )
+# 144 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_type_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 153 "TFbSRX/tfbsrxparser.mly"
+          _1
+# 150 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 155 "TFbSRX/tfbsrxparser.mly"
+      ( TInt )
+# 155 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_type_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 127 "TFbSRX/tfbsrxparser.mly"
+                   _3
+# 160 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 127 "TFbSRX/tfbsrxparser.mly"
+               _2
+# 164 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 127 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 168 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_simple_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 128 "TFbSRX/tfbsrxparser.mly"
+      ( Select(_3, _1) )
+# 173 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 125 "TFbSRX/tfbsrxparser.mly"
+               _3
+# 178 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 125 "TFbSRX/tfbsrxparser.mly"
+          _2
+# 182 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 125 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 186 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 126 "TFbSRX/tfbsrxparser.mly"
+      ( _2 )
+# 191 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 123 "TFbSRX/tfbsrxparser.mly"
+          _2
+# 196 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 123 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 200 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 124 "TFbSRX/tfbsrxparser.mly"
+      ( Record [] )
+# 205 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 121 "TFbSRX/tfbsrxparser.mly"
+                      _3
+# 210 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 121 "TFbSRX/tfbsrxparser.mly"
+          _2
+# 214 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_record_body) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 121 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 218 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 122 "TFbSRX/tfbsrxparser.mly"
+      ( Record _2 )
+# 223 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 119 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 228 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_ident_usage) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 120 "TFbSRX/tfbsrxparser.mly"
+      ( _1 )
+# 233 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 117 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 238 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : (
+# 13 "TFbSRX/tfbsrxparser.mly"
+       (bool)
+# 242 "TFbSRX/tfbsrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 118 "TFbSRX/tfbsrxparser.mly"
+      ( Bool _1 )
+# 247 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 114 "TFbSRX/tfbsrxparser.mly"
+            _1
+# 253 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : (
+# 24 "TFbSRX/tfbsrxparser.mly"
+       (int)
+# 257 "TFbSRX/tfbsrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 116 "TFbSRX/tfbsrxparser.mly"
+      ( Int _1 )
+# 262 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_simple_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 171 "TFbSRX/tfbsrxparser.mly"
+                              _5
+# 267 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_record_type) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 171 "TFbSRX/tfbsrxparser.mly"
+                         _4
+# 271 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 171 "TFbSRX/tfbsrxparser.mly"
+               _3
+# 275 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 171 "TFbSRX/tfbsrxparser.mly"
+         _2
+# 279 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 171 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 283 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 172 "TFbSRX/tfbsrxparser.mly"
+      ( (_1, _3)::_5 )
+# 288 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_record_type) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 169 "TFbSRX/tfbsrxparser.mly"
+               _3
+# 293 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 169 "TFbSRX/tfbsrxparser.mly"
+         _2
+# 297 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 168 "TFbSRX/tfbsrxparser.mly"
+            _1
+# 302 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 170 "TFbSRX/tfbsrxparser.mly"
+      ( [(_1, _3)] )
+# 307 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_record_type) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 134 "TFbSRX/tfbsrxparser.mly"
+                         _5
+# 312 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_record_body) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 134 "TFbSRX/tfbsrxparser.mly"
+                    _4
+# 316 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 134 "TFbSRX/tfbsrxparser.mly"
+               _3
+# 320 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 134 "TFbSRX/tfbsrxparser.mly"
+         _2
+# 324 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 134 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 328 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 135 "TFbSRX/tfbsrxparser.mly"
+      ( (_1, _3)::_5 )
+# 333 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_record_body) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 132 "TFbSRX/tfbsrxparser.mly"
+               _3
+# 338 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 132 "TFbSRX/tfbsrxparser.mly"
+         _2
+# 342 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 131 "TFbSRX/tfbsrxparser.mly"
+            _1
+# 347 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_label) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 133 "TFbSRX/tfbsrxparser.mly"
+      ( [(_1, _3)] )
+# 352 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_record_body) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 71 "TFbSRX/tfbsrxparser.mly"
+      _2
+# 357 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 70 "TFbSRX/tfbsrxparser.mly"
+     _1
+# 362 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 71 "TFbSRX/tfbsrxparser.mly"
+            ( _1 )
+# 367 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_main) : (
+# 66 "TFbSRX/tfbsrxparser.mly"
+      (Tfbsrxast.expr)
+# 371 "TFbSRX/tfbsrxparser__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 138 "TFbSRX/tfbsrxparser.mly"
+      _1
+# 377 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : (
+# 21 "TFbSRX/tfbsrxparser.mly"
+       (string)
+# 381 "TFbSRX/tfbsrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 140 "TFbSRX/tfbsrxparser.mly"
+      ( Lab _1 )
+# 386 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_label) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 142 "TFbSRX/tfbsrxparser.mly"
+            _1
+# 392 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 144 "TFbSRX/tfbsrxparser.mly"
+      ( Var _1 )
+# 397 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_ident_usage) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 147 "TFbSRX/tfbsrxparser.mly"
+           _1
+# 403 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : (
+# 21 "TFbSRX/tfbsrxparser.mly"
+       (string)
+# 407 "TFbSRX/tfbsrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 149 "TFbSRX/tfbsrxparser.mly"
+      ( Ident _1 )
+# 412 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_ident_decl) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 103 "TFbSRX/tfbsrxparser.mly"
+                 _3
+# 417 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 103 "TFbSRX/tfbsrxparser.mly"
+         _2
+# 421 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_exn_def) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 103 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 425 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 104 "TFbSRX/tfbsrxparser.mly"
+      ( let (n, t) = _2 in Raise(n, t, _3) )
+# 430 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 101 "TFbSRX/tfbsrxparser.mly"
+                                      _7
+# 435 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__7_ : Lexing.position) (_endpos__7_ : Lexing.position) (_startofs__7_ : int) (_endofs__7_ : int) (_loc__7_ : Lexing.position * Lexing.position) (
+# 101 "TFbSRX/tfbsrxparser.mly"
+                               _6
+# 439 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 101 "TFbSRX/tfbsrxparser.mly"
+                         _5
+# 443 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : (
+# 21 "TFbSRX/tfbsrxparser.mly"
+       (string)
+# 447 "TFbSRX/tfbsrxparser__mock.ml.mock"
+  )) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 101 "TFbSRX/tfbsrxparser.mly"
+                 _4
+# 451 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_exn_def) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 101 "TFbSRX/tfbsrxparser.mly"
+            _3
+# 455 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 101 "TFbSRX/tfbsrxparser.mly"
+       _2
+# 459 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 101 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 463 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 102 "TFbSRX/tfbsrxparser.mly"
+      ( let (n, t) = _4 in Try(_2, n, Ident _5, t, _7) )
+# 468 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 99 "TFbSRX/tfbsrxparser.mly"
+       _2
+# 473 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 99 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 477 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 100 "TFbSRX/tfbsrxparser.mly"
+      ( Get _2 )
+# 482 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 97 "TFbSRX/tfbsrxparser.mly"
+            _3
+# 487 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 97 "TFbSRX/tfbsrxparser.mly"
+        _2
+# 491 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 97 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 495 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 98 "TFbSRX/tfbsrxparser.mly"
+      ( Set(_1, _3) )
+# 500 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 95 "TFbSRX/tfbsrxparser.mly"
+       _2
+# 505 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 95 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 509 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 96 "TFbSRX/tfbsrxparser.mly"
+      ( Ref _2 )
+# 514 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 93 "TFbSRX/tfbsrxparser.mly"
+                          _6
+# 519 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 93 "TFbSRX/tfbsrxparser.mly"
+                     _5
+# 523 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 93 "TFbSRX/tfbsrxparser.mly"
+                _4
+# 527 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 93 "TFbSRX/tfbsrxparser.mly"
+           _3
+# 531 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 93 "TFbSRX/tfbsrxparser.mly"
+      _2
+# 535 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 93 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 539 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 94 "TFbSRX/tfbsrxparser.mly"
+      ( If(_2, _4, _6) )
+# 544 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                                                               _12
+# 549 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__12_ : Lexing.position) (_endpos__12_ : Lexing.position) (_startofs__12_ : int) (_endofs__12_ : int) (_loc__12_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                                                            _11
+# 553 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__11_ : Lexing.position) (_endpos__11_ : Lexing.position) (_startofs__11_ : int) (_endofs__11_ : int) (_loc__11_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                                                  _10
+# 557 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__10_ : Lexing.position) (_endpos__10_ : Lexing.position) (_startofs__10_ : int) (_endofs__10_ : int) (_loc__10_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                                            _9
+# 561 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__9_ : Lexing.position) (_endpos__9_ : Lexing.position) (_startofs__9_ : int) (_endofs__9_ : int) (_loc__9_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                                       _8
+# 565 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__8_ : Lexing.position) (_endpos__8_ : Lexing.position) (_startofs__8_ : int) (_endofs__8_ : int) (_loc__8_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                                 _7
+# 569 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__7_ : Lexing.position) (_endpos__7_ : Lexing.position) (_startofs__7_ : int) (_endofs__7_ : int) (_loc__7_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                       _6
+# 573 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                                 _5
+# 577 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+                      _4
+# 581 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+           _3
+# 585 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+       _2
+# 589 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 91 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 593 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 92 "TFbSRX/tfbsrxparser.mly"
+      ( LetRec(_3, _4, _6, _8, _10, _12) )
+# 598 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 89 "TFbSRX/tfbsrxparser.mly"
+                                              _6
+# 603 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
+# 89 "TFbSRX/tfbsrxparser.mly"
+                                       _5
+# 607 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 89 "TFbSRX/tfbsrxparser.mly"
+                             _4
+# 611 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 89 "TFbSRX/tfbsrxparser.mly"
+                       _3
+# 615 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 89 "TFbSRX/tfbsrxparser.mly"
+            _2
+# 619 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_ident_decl) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 89 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 623 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 90 "TFbSRX/tfbsrxparser.mly"
+      ( Function(_2, _4, _6) )
+# 628 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 87 "TFbSRX/tfbsrxparser.mly"
+              _3
+# 633 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 87 "TFbSRX/tfbsrxparser.mly"
+        _2
+# 637 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 87 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 641 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 88 "TFbSRX/tfbsrxparser.mly"
+      ( Equal(_1, _3) )
+# 646 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 85 "TFbSRX/tfbsrxparser.mly"
+       _2
+# 651 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 85 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 655 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 86 "TFbSRX/tfbsrxparser.mly"
+      ( Not _2 )
+# 660 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 83 "TFbSRX/tfbsrxparser.mly"
+           _3
+# 665 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 83 "TFbSRX/tfbsrxparser.mly"
+        _2
+# 669 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 83 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 673 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 84 "TFbSRX/tfbsrxparser.mly"
+      ( Or(_1, _3) )
+# 678 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 81 "TFbSRX/tfbsrxparser.mly"
+            _3
+# 683 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 81 "TFbSRX/tfbsrxparser.mly"
+        _2
+# 687 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 81 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 691 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 82 "TFbSRX/tfbsrxparser.mly"
+      ( And(_1, _3) )
+# 696 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 79 "TFbSRX/tfbsrxparser.mly"
+              _3
+# 701 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 79 "TFbSRX/tfbsrxparser.mly"
+        _2
+# 705 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 79 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 709 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 80 "TFbSRX/tfbsrxparser.mly"
+      ( Minus(_1, _3) )
+# 714 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 77 "TFbSRX/tfbsrxparser.mly"
+             _3
+# 719 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 77 "TFbSRX/tfbsrxparser.mly"
+        _2
+# 723 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 77 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 727 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 78 "TFbSRX/tfbsrxparser.mly"
+      ( Plus(_1, _3) )
+# 732 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 75 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 737 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_appl_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 76 "TFbSRX/tfbsrxparser.mly"
+      ( _1 )
+# 742 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 178 "TFbSRX/tfbsrxparser.mly"
+                  _3
+# 747 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 178 "TFbSRX/tfbsrxparser.mly"
+          _2
+# 751 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_exn_def) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 178 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 755 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 179 "TFbSRX/tfbsrxparser.mly"
+       ( _2 )
+# 760 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_exn_def) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 176 "TFbSRX/tfbsrxparser.mly"
+       _2
+# 765 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_type_decl) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 175 "TFbSRX/tfbsrxparser.mly"
+        _1
+# 770 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : (
+# 43 "TFbSRX/tfbsrxparser.mly"
+       (string)
+# 774 "TFbSRX/tfbsrxparser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 177 "TFbSRX/tfbsrxparser.mly"
+       ( (_1, _2) )
+# 779 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_exn_def) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 110 "TFbSRX/tfbsrxparser.mly"
+             _2
+# 784 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_simple_expr) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 110 "TFbSRX/tfbsrxparser.mly"
+   _1
+# 788 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_appl_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 111 "TFbSRX/tfbsrxparser.mly"
+      ( Appl(_1,_2) )
+# 793 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_appl_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 107 "TFbSRX/tfbsrxparser.mly"
+          _1
+# 799 "TFbSRX/tfbsrxparser__mock.ml.mock"
+   : 'tv_simple_expr) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 109 "TFbSRX/tfbsrxparser.mly"
+      ( _1 )
+# 804 "TFbSRX/tfbsrxparser__mock.ml.mock"
+     : 'tv_appl_expr) in
+  ((let rec diverge() = diverge() in diverge()) : 'tv_type_decl * 'tv_simple_expr * 'tv_record_type * 'tv_record_body * 'tv_main * 'tv_label * 'tv_ident_usage * 'tv_ident_decl * 'tv_expr * 'tv_exn_def * 'tv_appl_expr)
+
+and menhir_end_marker =
+  0
+
+# 180 "TFbSRX/tfbsrxparser.mly"
+  
+
+# 814 "TFbSRX/tfbsrxparser__mock.ml.mock"

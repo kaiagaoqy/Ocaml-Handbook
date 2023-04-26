@@ -1,0 +1,52 @@
+
+(library
+  (name fbsr)
+  (wrapped false)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (modules
+    fbdk
+    debugutils
+    version
+    fbsrast
+    fbsrinterp
+    fbsrlexer
+    fbsroptions
+    fbsrparser
+    fbsrpp
+    fbsrtype)
+  (private_modules
+    version
+    fbsrast
+    fbsrinterp
+    fbsrlexer
+    fbsroptions
+    fbsrparser
+    fbsrpp
+    fbsrtype))
+ 
+(ocamllex (modules fbsrlexer))
+(menhir (modules fbsrparser))
+
+(executable
+  (name interpreter)
+  (modes byte)
+  (modules interpreter)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (libraries
+    fbsr))
+
+(toplevel
+  (name toplevel)
+  (libraries utop fbsr))
+
+(alias
+  (name distributables)
+  (deps
+    interpreter.bc
+    toplevel.exe))
+
+(copy_files
+  (files %{project_root}/build_scripts/*.*))
+  

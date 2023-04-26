@@ -1,0 +1,53 @@
+
+(library
+  (name afbv)
+  (wrapped false)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (modules
+    fbdk
+    debugutils
+    version
+    afbvast
+    afbvinterp
+    afbvlexer
+    afbvoptions
+    afbvparser
+    afbvpp
+    afbvtype)
+  (private_modules
+    version
+    afbvast
+    afbvinterp
+    afbvlexer
+    afbvoptions
+    afbvparser
+    afbvpp
+    afbvtype))
+ 
+(ocamllex (modules afbvlexer))
+(menhir (modules afbvparser))
+
+(executable
+  (name interpreter)
+  (modes byte)
+  (modules interpreter)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (libraries
+    afbv))
+
+(toplevel
+  (name toplevel)
+  (libraries utop afbv))
+
+(alias
+  (name distributables)
+  (deps
+    afbv.cma
+    interpreter.bc
+    toplevel.exe))
+
+(copy_files
+  (files %{project_root}/build_scripts/*.*))
+  

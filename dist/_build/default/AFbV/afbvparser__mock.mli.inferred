@@ -1,0 +1,48 @@
+type token =
+    WITH
+  | VARIANT of string
+  | THEN
+  | TAIL
+  | STRING of string
+  | SND
+  | SENDTO
+  | SEMICOLON
+  | RPAREN
+  | RBRACKET
+  | PRINT
+  | PLUS
+  | PIPE
+  | OR
+  | NOT
+  | MINUS
+  | MATCH
+  | LPAREN
+  | LET
+  | LBRACKET
+  | INT of int
+  | IN
+  | IF
+  | IDENT of string
+  | HEAD
+  | GOESTO
+  | FUNCTION
+  | FST
+  | EQUAL
+  | EOEX
+  | ELSE
+  | CREATE
+  | CONS
+  | COMMA
+  | BOOL of bool
+  | AND
+val menhir_begin_marker : int
+val xv_simple_expr : Afbvast.expr
+val xv_pattern_list : (Afbvast.name * Afbvast.ident * Afbvast.expr) list
+val xv_pattern_ident : Afbvast.ident
+val xv_pattern : Afbvast.name * Afbvast.ident * Afbvast.expr
+val xv_main : Afbvast.expr
+val xv_ident_usage : Afbvast.expr
+val xv_ident_decl : Afbvast.ident
+val xv_expr : Afbvast.expr
+val xv_appl_expr : Afbvast.expr
+val menhir_end_marker : int

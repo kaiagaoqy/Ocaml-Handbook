@@ -1,0 +1,9 @@
+package "fb" (
+  directory = "fb"
+  description = ""
+  requires = "ppx_deriving.runtime"
+  archive(byte) = "fb.cma"
+  archive(native) = "fb.cmxa"
+  plugin(byte) = "fb.cma"
+  plugin(native) = "fb.cmxs"
+)

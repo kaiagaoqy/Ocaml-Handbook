@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+LOCALDIR=$(dirname $0)
+/usr/bin/env utop -init $LOCALDIR/fbrx.top

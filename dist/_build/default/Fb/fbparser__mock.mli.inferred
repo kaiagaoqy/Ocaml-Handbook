@@ -1,0 +1,30 @@
+type token =
+    THEN
+  | RPAREN
+  | REC
+  | PLUS
+  | OR
+  | NOT
+  | MINUS
+  | LPAREN
+  | LET
+  | INT of int
+  | IN
+  | IF
+  | IDENT of string
+  | GOESTO
+  | FUNCTION
+  | EQUAL
+  | EOEX
+  | ELSE
+  | BOOL of bool
+  | AND
+val menhir_begin_marker : int
+val xv_simple_expr : Fbast.expr
+val xv_negatable_expr : Fbast.expr
+val xv_main : Fbast.expr
+val xv_ident_usage : Fbast.expr
+val xv_ident_decl : Fbast.ident
+val xv_expr : Fbast.expr
+val xv_appl_expr : Fbast.expr
+val menhir_end_marker : int

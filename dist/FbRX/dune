@@ -1,0 +1,52 @@
+
+(library
+  (name fbrx)
+  (wrapped false)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (modules
+    fbdk
+    debugutils
+    version
+    fbrxast
+    fbrxinterp
+    fbrxlexer
+    fbrxoptions
+    fbrxparser
+    fbrxpp
+    fbrxtype)
+  (private_modules
+    version
+    fbrxast
+    fbrxinterp
+    fbrxlexer
+    fbrxoptions
+    fbrxparser
+    fbrxpp
+    fbrxtype))
+ 
+(ocamllex (modules fbrxlexer))
+(menhir (modules fbrxparser))
+
+(executable
+  (name interpreter)
+  (modes byte)
+  (modules interpreter)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (libraries
+    fbrx))
+
+(toplevel
+  (name toplevel)
+  (libraries utop fbrx))
+
+(alias
+  (name distributables)
+  (deps
+    interpreter.bc
+    toplevel.exe))
+    
+(copy_files
+  (files %{project_root}/build_scripts/*.*))
+  

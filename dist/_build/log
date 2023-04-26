@@ -1,0 +1,117 @@
+# dune utop TFbSRX
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /Users/kaiagao/Downloads/dist
+# Auto-detected concurrency: 8
+$ /Users/kaiagao/.opam/4.14.1/bin/ocamlc.opt -config > /var/folders/_n/m3nnfh793dz6s8wg4lfcfvyr0000gn/T/dune_b0db6c_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; toplevel_path = Some External "/Users/kaiagao/.opam/4.14.1/lib/toplevel"
+#  ; ocaml_bin = External "/Users/kaiagao/.opam/4.14.1/bin"
+#  ; ocaml = Ok External "/Users/kaiagao/.opam/4.14.1/bin/ocaml"
+#  ; ocamlc = External "/Users/kaiagao/.opam/4.14.1/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/kaiagao/.opam/4.14.1/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/kaiagao/.opam/4.14.1/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/kaiagao/.opam/4.14.1/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/kaiagao/.opam/4.14.1/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/kaiagao/.opam/4.14.1/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/kaiagao/Downloads/dist"
+#        ; "INSIDE_DUNE" : "/Users/kaiagao/Downloads/dist/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/kaiagao/Downloads/dist/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/kaiagao/Downloads/dist/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/kaiagao/Downloads/dist/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/Users/kaiagao/.opam/4.14.1/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.1"
+#      ; standard_library_default = "/Users/kaiagao/.opam/4.14.1/lib/ocaml"
+#      ; standard_library = "/Users/kaiagao/.opam/4.14.1/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "arm64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "aarch64-apple-darwin21.6.0"
+#      ; target = "aarch64-apple-darwin21.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default/build_scripts && /bin/chmod +x ./gen_version.sh)
+$ (cd _build/default/build_scripts && ./gen_version.sh)
+$ (cd _build/.sandbox/22c4f8af2bec9d5bc79659b251ba3bb1/default && .ppx/0bb5094b13567c3c4e1ee33245b80e63/ppx.exe --cookie 'library-name="tfbsrx"' -o TFbSRX/version.pp.ml --impl TFbSRX/version.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /Users/kaiagao/.opam/4.14.1/bin/ocamldep.opt -modules -impl TFbSRX/version.pp.ml) > _build/default/TFbSRX/.tfbsrx.objs/version.impl.d
+$ (cd _build/default && /Users/kaiagao/.opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-33-39 -g -bin-annot -I TFbSRX/.tfbsrx.objs/byte -I TFbSRX/.tfbsrx.objs/public_cmi -I /Users/kaiagao/.opam/4.14.1/lib/ppx_deriving/runtime -I /Users/kaiagao/.opam/4.14.1/lib/result -no-alias-deps -opaque -o TFbSRX/.tfbsrx.objs/byte/version.cmo -c -impl TFbSRX/version.pp.ml)
+$ (cd _build/default && /Users/kaiagao/.opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-33-39 -g -a -o TFbSRX/tfbsrx.cma TFbSRX/.tfbsrx.objs/byte/version.cmo TFbSRX/.tfbsrx.objs/byte/tfbsrxast.cmo TFbSRX/.tfbsrx.objs/byte/tfbsrxpp.cmo TFbSRX/.tfbsrx.objs/byte/tfbsrxtype.cmo TFbSRX/.tfbsrx.objs/byte/tfbsrxparser.cmo TFbSRX/.tfbsrx.objs/byte/tfbsrxoptions.cmo TFbSRX/.tfbsrx.objs/byte/tfbsrxlexer.cmo TFbSRX/.tfbsrx.objs/byte/tfbsrxinterp.cmo TFbSRX/.tfbsrx.objs/byte/fbdk.cmo TFbSRX/.tfbsrx.objs/byte/debugutils.cmo)
+$ (cd _build/default && /Users/kaiagao/.opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -o TFbSRX/.utop/utop.exe -output-complete-exe /Users/kaiagao/.opam/4.14.1/lib/ocaml/compiler-libs/ocamlcommon.cma /Users/kaiagao/.opam/4.14.1/lib/ocaml/compiler-libs/ocamlbytecomp.cma /Users/kaiagao/.opam/4.14.1/lib/ocaml/compiler-libs/ocamltoplevel.cma /Users/kaiagao/.opam/4.14.1/lib/findlib/findlib.cma /Users/kaiagao/.opam/4.14.1/lib/findlib/findlib_top.cma /Users/kaiagao/.opam/4.14.1/lib/logs/logs.cma -I /Users/kaiagao/.opam/4.14.1/lib/ocaml /Users/kaiagao/.opam/4.14.1/lib/lwt/lwt.cma /Users/kaiagao/.opam/4.14.1/lib/logs/logs_lwt.cma /Users/kaiagao/.opam/4.14.1/lib/ocaml/unix.cma -I /Users/kaiagao/.opam/4.14.1/lib/ocaml /Users/kaiagao/.opam/4.14.1/lib/ocaml/bigarray.cma -I /Users/kaiagao/.opam/4.14.1/lib/ocaml /Users/kaiagao/.opam/4.14.1/lib/ocplib-endian/ocplib_endian.cma /Users/kaiagao/.opam/4.14.1/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma /Users/kaiagao/.opam/4.14.1/lib/ocaml/threads/threads.cma -I /Users/kaiagao/.opam/4.14.1/lib/ocaml /Users/kaiagao/.opam/4.14.1/lib/lwt/unix/lwt_unix.cma -I /Users/kaiagao/.opam/4.14.1/lib/lwt/unix /Users/kaiagao/.opam/4.14.1/lib/react/react.cma /Users/kaiagao/.opam/4.14.1/lib/lwt_react/lwt_react.cma /Users/kaiagao/.opam/4.14.1/lib/result/result.cma /Users/kaiagao/.opam/4.14.1/lib/uutf/uutf.cma /Users/kaiagao/.opam/4.14.1/lib/uucp/uucp.cma /Users/kaiagao/.opam/4.14.1/lib/uuseg/uuseg.cma /Users/kaiagao/.opam/4.14.1/lib/zed/zed.cma /Users/kaiagao/.opam/4.14.1/lib/trie/trie.cma /Users/kaiagao/.opam/4.14.1/lib/mew/mew.cma /Users/kaiagao/.opam/4.14.1/lib/mew_vi/mew_vi.cma /Users/kaiagao/.opam/4.14.1/lib/lambda-term/lambda_term.cma -I /Users/kaiagao/.opam/4.14.1/lib/lambda-term /Users/kaiagao/.opam/4.14.1/lib/utop/uTop.cma /Users/kaiagao/.opam/4.14.1/lib/ppx_deriving/runtime/ppx_deriving_runtime.cma TFbSRX/tfbsrx.cma TFbSRX/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -linkall -warn-error -31)

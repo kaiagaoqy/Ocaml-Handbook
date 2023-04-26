@@ -1,0 +1,41 @@
+type token =
+    WITH
+  | THEN
+  | SEMICOLON
+  | RPAREN
+  | RCURLY
+  | RBRACKET
+  | PLUS
+  | PIPE
+  | OR
+  | NOT
+  | MINUS
+  | MATCH
+  | LPAREN
+  | LET
+  | LCURLY
+  | LBRACKET
+  | INT of int
+  | IN
+  | IF
+  | IDENT of string
+  | GOESTO
+  | FUNCTION
+  | EQUAL
+  | EOEX
+  | ELSE
+  | DOT
+  | CONS
+  | BOOL of bool
+  | AND
+exception DuplicateLabel
+val menhir_begin_marker : int
+val xv_simple_expr : Fbrelast.expr
+val xv_record_body : (Fbrelast.label * Fbrelast.expr) list
+val xv_main : Fbrelast.expr
+val xv_label : Fbrelast.label
+val xv_ident_usage : Fbrelast.expr
+val xv_ident_decl : Fbrelast.ident
+val xv_expr : Fbrelast.expr
+val xv_appl_expr : Fbrelast.expr
+val menhir_end_marker : int

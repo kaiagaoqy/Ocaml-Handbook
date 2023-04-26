@@ -1,0 +1,52 @@
+
+(library
+  (name tfbsrx)
+  (wrapped false)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (modules
+    fbdk
+    debugutils
+    version
+    tfbsrxast
+    tfbsrxinterp
+    tfbsrxlexer
+    tfbsrxoptions
+    tfbsrxparser
+    tfbsrxpp
+    tfbsrxtype)
+  (private_modules
+    version
+    tfbsrxast
+    tfbsrxinterp
+    tfbsrxlexer
+    tfbsrxoptions
+    tfbsrxparser
+    tfbsrxpp
+    tfbsrxtype))
+ 
+(ocamllex (modules tfbsrxlexer))
+(menhir (modules tfbsrxparser))
+
+(executable
+  (name interpreter)
+  (modes byte)
+  (modules interpreter)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (libraries
+    tfbsrx))
+
+(toplevel
+  (name toplevel)
+  (libraries utop tfbsrx))
+
+(alias
+  (name distributables)
+  (deps
+    interpreter.bc
+    toplevel.exe))
+    
+(copy_files
+  (files %{project_root}/build_scripts/*.*))
+  

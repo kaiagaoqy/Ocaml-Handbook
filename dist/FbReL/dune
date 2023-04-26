@@ -1,0 +1,52 @@
+
+(library
+  (name fbrel)
+  (wrapped false)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (modules
+    fbdk
+    debugutils
+    version
+    fbrelast
+    fbrelinterp
+    fbrellexer
+    fbreloptions
+    fbrelparser
+    fbrelpp
+    fbreltype)
+  (private_modules
+    version
+    fbrelast
+    fbrelinterp
+    fbrellexer
+    fbreloptions
+    fbrelparser
+    fbrelpp
+    fbreltype))
+ 
+(ocamllex (modules fbrellexer))
+(menhir (modules fbrelparser))
+
+(executable
+  (name interpreter)
+  (modes byte)
+  (modules interpreter)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (libraries
+    fbrel))
+
+(toplevel
+  (name toplevel)
+  (libraries utop fbrel))
+
+(alias
+  (name distributables)
+  (deps
+    interpreter.bc
+    toplevel.exe))
+    
+(copy_files
+  (files %{project_root}/build_scripts/*.*))
+  

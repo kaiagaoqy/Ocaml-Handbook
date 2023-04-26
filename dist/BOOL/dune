@@ -1,0 +1,52 @@
+
+(library
+  (name bool)
+  (wrapped false)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (modules
+    fbdk
+    debugutils
+    version
+    boolast
+    boolinterp
+    boollexer
+    booloptions
+    boolparser
+    boolpp
+    booltype)
+  (private_modules
+    version
+    boolast
+    boolinterp
+    boollexer
+    booloptions
+    boolparser
+    boolpp
+    booltype))
+ 
+(ocamllex (modules boollexer))
+(menhir (modules boolparser))
+
+(executable
+  (name interpreter)
+  (modes byte)
+  (modules interpreter)
+  (preprocess 
+    (pps ppx_deriving.show))
+  (libraries
+    bool))
+
+(toplevel
+  (name toplevel)
+  (libraries utop bool))
+
+(alias
+  (name distributables)
+  (deps
+    interpreter.bc
+    toplevel.exe))
+
+(copy_files
+  (files %{project_root}/build_scripts/*.*))
+  

@@ -1,0 +1,110 @@
+(lang dune 3.7)
+(name fbdk)
+(sections (lib .) (libexec .) (doc ../../doc/fbdk))
+(files
+ (lib
+  (META
+   dune-package
+   fb/debugutils.cmi
+   fb/debugutils.cmt
+   fb/debugutils.cmx
+   fb/debugutils.ml
+   fb/fb.a
+   fb/fb.cma
+   fb/fb.cmxa
+   fb/fbast.cmi
+   fb/fbast.cmt
+   fb/fbast.cmx
+   fb/fbast.ml
+   fb/fbdk.cmi
+   fb/fbdk.cmt
+   fb/fbdk.cmti
+   fb/fbdk.cmx
+   fb/fbdk.ml
+   fb/fbdk.mli
+   fb/fbinterp.cmi
+   fb/fbinterp.cmt
+   fb/fbinterp.cmx
+   fb/fbinterp.ml
+   fb/fblexer.cmi
+   fb/fblexer.cmt
+   fb/fblexer.cmx
+   fb/fblexer.ml
+   fb/fboptions.cmi
+   fb/fboptions.cmt
+   fb/fboptions.cmx
+   fb/fboptions.ml
+   fb/fbparser.cmi
+   fb/fbparser.cmt
+   fb/fbparser.cmti
+   fb/fbparser.cmx
+   fb/fbparser.ml
+   fb/fbparser.mli
+   fb/fbpp.cmi
+   fb/fbpp.cmt
+   fb/fbpp.cmx
+   fb/fbpp.ml
+   fb/fbtype.cmi
+   fb/fbtype.cmt
+   fb/fbtype.cmx
+   fb/fbtype.ml
+   fb/version.cmi
+   fb/version.cmt
+   fb/version.cmx
+   fb/version.ml
+   opam))
+ (libexec (fb/fb.cmxs))
+ (doc (README.md)))
+(library
+ (name fbdk.fb)
+ (kind normal)
+ (archives (byte fb/fb.cma) (native fb/fb.cmxa))
+ (plugins (byte fb/fb.cma) (native fb/fb.cmxs))
+ (native_archives fb/fb.a)
+ (requires ppx_deriving.runtime)
+ (modes byte native)
+ (modules
+  (unwrapped
+   (module
+    (obj_name debugutils)
+    (visibility public)
+    (source (path Debugutils) (impl (path fb/debugutils.ml))))
+   (module
+    (obj_name fbast)
+    (visibility public)
+    (source (path Fbast) (impl (path fb/fbast.ml))))
+   (module
+    (obj_name fbdk)
+    (visibility public)
+    (source (path Fbdk) (intf (path fb/fbdk.mli)) (impl (path fb/fbdk.ml))))
+   (module
+    (obj_name fbinterp)
+    (visibility public)
+    (source (path Fbinterp) (impl (path fb/fbinterp.ml))))
+   (module
+    (obj_name fblexer)
+    (visibility public)
+    (source (path Fblexer) (impl (path fb/fblexer.ml))))
+   (module
+    (obj_name fboptions)
+    (visibility public)
+    (source (path Fboptions) (impl (path fb/fboptions.ml))))
+   (module
+    (obj_name fbparser)
+    (visibility public)
+    (source
+     (path Fbparser)
+     (intf (path fb/fbparser.mli))
+     (impl (path fb/fbparser.ml))))
+   (module
+    (obj_name fbpp)
+    (visibility public)
+    (source (path Fbpp) (impl (path fb/fbpp.ml))))
+   (module
+    (obj_name fbtype)
+    (visibility public)
+    (source (path Fbtype) (impl (path fb/fbtype.ml))))
+   (module
+    (obj_name version)
+    (visibility public)
+    (source (path Version) (impl (path fb/version.ml)))))))

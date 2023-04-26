@@ -1,0 +1,5 @@
+type token = TRUE | RPAREN | OR | NOT | LPAREN | IMPLIES | FALSE | EOEX | AND
+val menhir_begin_marker : int
+val xv_main : Boolast.expr
+val xv_expr : Boolast.expr
+val menhir_end_marker : int

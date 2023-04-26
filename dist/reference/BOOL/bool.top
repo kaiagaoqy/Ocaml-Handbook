@@ -1,0 +1,15 @@
+let () =
+let this_dir = Filename.dirname Sys.argv.(2) in
+let lib_dir = Filename.concat this_dir "libs" in
+Topdirs.dir_directory lib_dir;;
+
+#load "boolast.cmo"
+#load "boolpp.cmo"
+#load "booltype.cmo"
+#load "boollexer.cmo"
+#load "boolparser.cmo"
+#load "booloptions.cmo"
+#load "boolinterp.cmo"
+#load "version.cmo"
+#load "fbdk.cmo"
+#load "debugutils.cmo"
